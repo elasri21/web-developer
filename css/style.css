@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+:root {
+    /* project Colors */
+    --link-c: #474d75;
+    --dark-blue: #3a50f9;
+    --blue-sky: #3fb7fe;
+    --green: #3dd2ae;
+    /*old colors*/
+    --main-color: #333;
+    --yellow: #e3b700;
+    --orange: #f15e0e;
+    --pink: #ee4dc6;
+    --soft-pink: #e1b7bf;
+    --dark-pink: #c262af;
+    --grey: #d4c7e8;
+    --red: #ec563d;
+    --soft-red:#ef5a60;
+    --violet: #6e00fd;
+    --black: #111;
+    --text-c: #555c66;
+    --bg-footer: #333;
+    --light-text: #808080;
+    --main-bg: #f5f7fa;/* icon bg */
+    --shadow: rgb(0 0 0 / 20%);
+    --input-border: #d9d9d9;
+    --link-bg: #b9c1cc;
+    --dark-grayish: #414c62;
+    --olive: #c4b35d;
+    --grey-80: #808080;
+}
+/* global rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    margin: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+}
+@media (min-width: 922px) {
+    .container {
+        margin-left: 100px !important;
+        margin-right: 100px !important;
+    }
+}
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+/* start header */
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111;
+    height: 74px;
+}
+header form input {
+    border: 1px solid white;
+}
+header .search input::placeholder {
+    color: var(--input-border);
+}
+header .search i {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+@media (max-width: 767px) {
+    header nav {
+        display: none;
+        position: absolute;
+        top: 74px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-footer);
+        padding: 30px;
+    }
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav ul li {
+        flex-basis: 100%;
+    }
+    header nav ul li a {
+        color: white !important;
+    }
+    header nav .close {
+        display: block !important;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+header nav ul li a {
+    color: var(--footer-bg);
+}
+header nav ul li a:hover {
+    color: var(--light-text);
+}
+header nav .close {
+    color: white;
+    display: none;
+}
+@media (max-width: 767px) {
+    header .open {
+        display: block !important;
+    }
+}
+header .open {
+    display: none;
+}
+/* end header */
+
+/* start landing*/
+@media (min-width: 768px) {
+    .landing .container > div {
+        width: calc(50% - 15px);
+    }
+}
+.landing .container .info a:hover {
+    color: var(--red);
+    background-color: white;
+}
+/* end landing *
+
+/* profile */
+.profile .container .social a:hover i {
+    color: var(--red);
+}
+/* profile */
+
+/* about */
+.about .container p {
+    max-width: 600px;
+}
+.about .container .image {
+    height: calc(100vh - 100px);
+}
+@media (min-width: 768px) {
+    .about .container .contact-info {
+        position: absolute;
+        bottom: 100px;
+        right: 50px;
+    }
+}
+/* about */
+
+/* gallery */
+.gallery .container::before {
+    content: "";
+    width: 20%;
+    height: 100%;
+    background-color: var(--red);
+    position: absolute;
+    top: 0;
+    left: 20%;
+}
+@media (min-width: 768px) {
+    .gallery .container .text  {
+        margin-left: auto;
+        top: -60px;
+    }
+}
+.gallery .container .text {
+    max-width: 500px;
+}
+.gallery .container .text a:hover {
+    background-color: var(--red);
+    color: white;
+}
+/* gallery */
+
+/* slider */
+.slider .container .slide p {
+    max-width: 800px;
+}
+/* slider */
+
+/* contact */
+@media (min-width: 768px) {
+    .contact .container > div {
+        width: calc(50% - 15px);
+    }
+}
+.contact .container .forn-control textarea {
+    height: 100px;
+}
+.contact .container .forn-control .field {
+    caret-color: white;
+}
+.contact .container .forn-control .field:focus::placeholder {
+    opacity: 0;
+}
+.contact .container .forn-control .submit:hover {
+    background-color: var(--grey);
+    color: #111;
+}
+.contact .container .forn-control .social a:hover i {
+    color: var(--grey);
+}
+/* contact */
+
+/* start footer */
+footer .text {
+    max-width: 500px;
+}
+footer .social-media a:hover i {
+    color: var(--orange);
+}
+footer a:hover {
+    color: var(--dark-grayish);
+    text-decoration: underline;
+}
+/* end footer */
